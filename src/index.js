@@ -11,13 +11,13 @@ import {compose} from './compose'
 
 export default {setAt, appendAt, copy, when, compose}
 /**
- * Applies changes to the source object to create a new destination object.
+ * @private
  * @interface
  */
 export function Transformer () {}
 
 /**
- * Useful utils that help in composing {@link Transformer}
+ * @private
  * @interface
  */
 export function Helper () {}

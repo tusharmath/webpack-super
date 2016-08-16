@@ -20,25 +20,13 @@ npm install webpack-super --save
 * [setAt(path, value, obj)](#setAt) ⇒ <code>object</code>
 * [when(condition, func)](#when) ⇒ <code>function</code>
 
-<a name="Transformer"></a>
-
-## Transformer
-Applies changes to the source object to create a new destination object.
-
-**Kind**: global interface  
-<a name="Helper"></a>
-
-## Helper
-Useful utils that help in composing [Transformer](#Transformer)
-
-**Kind**: global interface  
 <a name="appendAt"></a>
 
 ## appendAt(path, value, obj) ⇒ <code>object</code>
 Creates a new object with the value set at the path provided and copy the rest.
 
 **Kind**: global function  
-**Implements:** <code>[Transformer](#Transformer)</code>  
+**Implements:** <code>Transformer</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -52,7 +40,7 @@ Creates a new object with the value set at the path provided and copy the rest.
 Creates a composition factory functions
 
 **Kind**: global function  
-**Implements:** <code>[Helper](#Helper)</code>  
+**Implements:** <code>Helper</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -64,7 +52,7 @@ Creates a composition factory functions
 Copies a value at a `path` from `source` to `destination`
 
 **Kind**: global function  
-**Implements:** <code>[Transformer](#Transformer)</code>  
+**Implements:** <code>Transformer</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -82,7 +70,7 @@ copy('a.b', {a: {b: 100}}, {p: 100}) // outputs: {a: {b: 100}, q: 100}
 Creates a new object with the `value` set at the `path` provided and copy the rest.
 
 **Kind**: global function  
-**Implements:** <code>[Transformer](#Transformer)</code>  
+**Implements:** <code>Transformer</code>  
 **Returns**: <code>object</code> - - the new object with the `value`  
 
 | Param | Type | Description |
@@ -103,7 +91,7 @@ Returns a new function that is either has no effect (identity) or
 or has the same as the passed `func` based on the `condition`.
 
 **Kind**: global function  
-**Implements:** <code>[Transformer](#Transformer)</code>  
+**Implements:** <code>Transformer</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
