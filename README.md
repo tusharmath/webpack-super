@@ -15,6 +15,7 @@ npm install webpack-super --save
 ## Functions
 
 * [appendAt(path, value, obj)](#appendAt)
+* [copy(path, source, destination)](#copy) ⇒ <code>object</code>
 * [setAt(path, value, obj)](#setAt) ⇒ <code>object</code>
 
 <a name="appendAt"></a>
@@ -30,6 +31,23 @@ Creates a new object with the value set at the path provided and copy the rest.
 | value | <code>any</code> | the value that needs to be set |
 | obj | <code>object</code> | the object that needs to be transformed |
 
+<a name="copy"></a>
+
+## copy(path, source, destination) ⇒ <code>object</code>
+Copies a value at a `path` from `source` to `destination`
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | path string where the value needs to be picked/set |
+| source | <code>object</code> | source object from where the value needs to be picked |
+| destination | <code>object</code> | destination object where the value needs to be set |
+
+**Example**  
+```js
+copy('a.b', {a: {b: 100}}, {p: 100}) // outputs: {a: {b: 100}, q: 100}
+```
 <a name="setAt"></a>
 
 ## setAt(path, value, obj) ⇒ <code>object</code>
