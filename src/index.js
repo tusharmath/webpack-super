@@ -14,10 +14,10 @@ export default {setAt, appendAt, copy, when, compose}
  * Applies changes to the source object to create a new destination object.
  * @interface
  */
-function Transformer () {}
+export function Transformer () {}
 
 /**
  * Useful utils that help in composing {@link Transformer}
  * @interface
  */
-function Helper () {}
+export function Helper () {}
