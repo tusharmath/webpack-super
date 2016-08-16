@@ -4,7 +4,7 @@
 
 'use strict'
 
-import C from '../src/webpack-configurator'
+import C from '../src/index'
 import test from 'ava'
 
 test('keys', t => {
