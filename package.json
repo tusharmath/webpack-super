@@ -1,5 +1,5 @@
 {
-  "name": "webpack-configurator",
+  "name": "webpack-super",
   "version": "1.0.0",
   "description": "declarative approach to creating webpack config",
   "author": {
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tusharmath/webpack-configurator.git"
+    "url": "https://github.com/tusharmath/webpack-super.git"
   },
   "engines": {
     "node": ">= 6.0.0"
