@@ -12,11 +12,28 @@ declarative approach to creating webpack config
 npm install webpack-super --save
 ```
 
+## Constants
+
+* [when](#when) ⇒ <code>function</code>
+
 ## Functions
 
 * [appendAt(path, value, obj)](#appendAt)
 * [copy(path, source, destination)](#copy) ⇒ <code>object</code>
 * [setAt(path, value, obj)](#setAt) ⇒ <code>object</code>
+
+<a name="when"></a>
+
+## when ⇒ <code>function</code>
+Returns a new function that is either has no effect (identity) or
+or has the same as the passed `func` based on the `condition`.
+
+**Kind**: global constant  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| condition | <code>boolean</code> | the condition |
+| func | <code>function</code> | the function to be called |
 
 <a name="appendAt"></a>
 
