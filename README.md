@@ -12,3 +12,40 @@ declarative approach to creating webpack config
 npm install webpack-super --save
 ```
 
+## Functions
+
+* [appendAt(path, value, obj)](#appendAt)
+* [setAt(path, value, obj)](#setAt) ⇒ <code>object</code>
+
+<a name="appendAt"></a>
+
+## appendAt(path, value, obj)
+Creates a new object with the value set at the path provided and copy the rest.
+
+**Kind**: global function  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | path string where the value needs to be set |
+| value | <code>any</code> | the value that needs to be set |
+| obj | <code>object</code> | the object that needs to be transformed |
+
+<a name="setAt"></a>
+
+## setAt(path, value, obj) ⇒ <code>object</code>
+Creates a new object with the `value` set at the `path` provided and copy the rest.
+
+**Kind**: global function  
+**Returns**: <code>object</code> - - the new object with the `value`  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| path | <code>string</code> | path string where the value needs to be set |
+| value | <code>any</code> | the value that needs to be set |
+| obj | <code>object</code> | the object that needs to be transformed |
+
+**Example**  
+```js
+setAt('entry', './src/main.js', {}) // outputs: {entry: './src/main.js'}
+setAt('output.filename', '[hash].bundle.js', {}) // outputs: {output: {filename: '[hash].bundle.js'}}
+```
