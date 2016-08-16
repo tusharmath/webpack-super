@@ -12,35 +12,33 @@ declarative approach to creating webpack config
 npm install webpack-super --save
 ```
 
-## Constants
-
-* [when](#when) ⇒ <code>function</code>
-
 ## Functions
 
-* [appendAt(path, value, obj)](#appendAt)
+* [appendAt(path, value, obj)](#appendAt) ⇒ <code>object</code>
+* [compose(...funcs)](#compose) ⇒ <code>function</code>
 * [copy(path, source, destination)](#copy) ⇒ <code>object</code>
 * [setAt(path, value, obj)](#setAt) ⇒ <code>object</code>
+* [when(condition, func)](#when) ⇒ <code>function</code>
 
-<a name="when"></a>
+<a name="Transformer"></a>
 
-## when ⇒ <code>function</code>
-Returns a new function that is either has no effect (identity) or
-or has the same as the passed `func` based on the `condition`.
+## Transformer
+Applies changes to the source object to create a new destination object.
 
-**Kind**: global constant  
+**Kind**: global interface  
+<a name="Helper"></a>
 
-| Param | Type | Description |
-| --- | --- | --- |
-| condition | <code>boolean</code> | the condition |
-| func | <code>function</code> | the function to be called |
+## Helper
+Useful utils that help in composing [Transformer](#Transformer)
 
+**Kind**: global interface  
 <a name="appendAt"></a>
 
-## appendAt(path, value, obj)
+## appendAt(path, value, obj) ⇒ <code>object</code>
 Creates a new object with the value set at the path provided and copy the rest.
 
 **Kind**: global function  
+**Implements:** <code>[Transformer](#Transformer)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -48,12 +46,25 @@ Creates a new object with the value set at the path provided and copy the rest.
 | value | <code>any</code> | the value that needs to be set |
 | obj | <code>object</code> | the object that needs to be transformed |
 
+<a name="compose"></a>
+
+## compose(...funcs) ⇒ <code>function</code>
+Creates a composition factory functions
+
+**Kind**: global function  
+**Implements:** <code>[Helper](#Helper)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| ...funcs | <code>function</code> | factory functions |
+
 <a name="copy"></a>
 
 ## copy(path, source, destination) ⇒ <code>object</code>
 Copies a value at a `path` from `source` to `destination`
 
 **Kind**: global function  
+**Implements:** <code>[Transformer](#Transformer)</code>  
 
 | Param | Type | Description |
 | --- | --- | --- |
@@ -71,6 +82,7 @@ copy('a.b', {a: {b: 100}}, {p: 100}) // outputs: {a: {b: 100}, q: 100}
 Creates a new object with the `value` set at the `path` provided and copy the rest.
 
 **Kind**: global function  
+**Implements:** <code>[Transformer](#Transformer)</code>  
 **Returns**: <code>object</code> - - the new object with the `value`  
 
 | Param | Type | Description |
@@ -84,3 +96,17 @@ Creates a new object with the `value` set at the `path` provided and copy the re
 setAt('entry', './src/main.js', {}) // outputs: {entry: './src/main.js'}
 setAt('output.filename', '[hash].bundle.js', {}) // outputs: {output: {filename: '[hash].bundle.js'}}
 ```
+<a name="when"></a>
+
+## when(condition, func) ⇒ <code>function</code>
+Returns a new function that is either has no effect (identity) or
+or has the same as the passed `func` based on the `condition`.
+
+**Kind**: global function  
+**Implements:** <code>[Transformer](#Transformer)</code>  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| condition | <code>boolean</code> | the condition |
+| func | <code>function</code> | the function to be called |
+

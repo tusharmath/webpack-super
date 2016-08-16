@@ -9,6 +9,8 @@ import R from 'ramda'
 /**
  * Returns a new function that is either has no effect (identity) or
  * or has the same as the passed `func` based on the `condition`.
+ * @implements Transformer
+ * @function
  * @param {boolean} condition - the condition
  * @param {function} func - the function to be called
  * @return {function}
