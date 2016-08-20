@@ -4,7 +4,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/tusharmath/webpack-super/badge.svg)](https://coveralls.io/github/tusharmath/webpack-super)
 [![Donate Bitcoin](https://img.shields.io/badge/donate-bitcoin-green.svg)](https://www.coinbase.com/tusharmath)
 
-declarative approach to creating webpack config
+a functional approach to writing webpack configs
 
 ## Installation
 
@@ -71,7 +71,7 @@ Creates a new object with the `value` set at the `path` provided and copy the re
 
 **Kind**: global function  
 **Implements:** <code>Transformer</code>  
-**Returns**: <code>object</code> - - the new object with the `value`  
+**Returns**: <code>object</code> - the new object with the `value`  
 
 | Param | Type | Description |
 | --- | --- | --- |

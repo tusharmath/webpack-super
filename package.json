@@ -1,6 +1,6 @@
 {
   "name": "webpack-super",
-  "description": "declarative approach to creating webpack config",
+  "description": "a functional approach to writing webpack configs",
   "author": {
     "name": "Tushar Mathur &lt;tusharmath@gmail.com&gt;",
     "url": "http://tusharm.com"
