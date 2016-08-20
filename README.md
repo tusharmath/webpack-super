@@ -71,7 +71,7 @@ Creates a new object with the `value` set at the `path` provided and copy the re
 
 **Kind**: global function  
 **Implements:** <code>Transformer</code>  
-**Returns**: <code>object</code> - - the new object with the `value`  
+**Returns**: <code>object</code> - the new object with the `value`  
 
 | Param | Type | Description |
 | --- | --- | --- |
