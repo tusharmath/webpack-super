@@ -8,6 +8,6 @@ import C from '../src/index'
 import test from 'ava'
 
 test('keys', t => {
-  const expected = ['setAt', 'appendAt', 'compose', 'copy', 'when']
+  const expected = ['setAt', 'appendAt', 'compose', 'when']
   t.deepEqual(Object.keys(C).sort(), expected.sort())
 })

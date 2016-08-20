@@ -5,11 +5,10 @@
 'use strict'
 import {setAt} from './set-at'
 import {appendAt} from './append-at'
-import {copy} from './copy'
 import {when} from './when'
 import {compose} from './compose'
 
-export default {setAt, appendAt, copy, when, compose}
+export default {setAt, appendAt, when, compose}
 /**
  * @private
  * @interface
